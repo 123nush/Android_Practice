@@ -1,5 +1,6 @@
 package com.example.sanuanu;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Button b1=findViewById(R.id.button_first);
         TextView r=findViewById(R.id.result);
         Button b2=findViewById(R.id.button_second);
+        Button button_relative=findViewById(R.id.button_relative);
         //code for addition
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        button_relative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent rel=new Intent(MainActivity.this,Relative.class);
+                startActivity(rel);
+            }
+        });
+
     }
 
     @Override
