@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView r=findViewById(R.id.result);
         Button b2=findViewById(R.id.button_second);
         Button button_relative=findViewById(R.id.button_relative);
+        Button button_other=findViewById(R.id.other_layout);
         //code for addition
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int z=x+y;
                 r.setText(String.valueOf(z));
-                Log.d("RESUTLT",r.toString());
+                Log.d("RESULT",r.toString());
 
 
             }
@@ -84,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent rel=new Intent(MainActivity.this,Relative.class);
                 startActivity(rel);
+            }
+        });
+        button_other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent other=new Intent(MainActivity.this,Other_layouts.class);
+                startActivity(other);
+
             }
         });
 
