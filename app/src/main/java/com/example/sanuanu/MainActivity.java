@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         button_relative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button app=findViewById(R.id.app);
+        app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ab =new Intent(MainActivity.this,AppBarFragments.class);
+                startActivity(ab);
+            }
+        });
     }
 
     @Override
