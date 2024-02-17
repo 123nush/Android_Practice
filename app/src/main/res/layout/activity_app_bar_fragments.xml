@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AppBarFragments">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -12,15 +13,27 @@
         >
 
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:id="@+id/fragment1"
-            />
-
-
-
-
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment 1"
+        android:layout_gravity="center"
+        android:id="@+id/Button1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment 2"
+        android:layout_gravity="center"
+        android:id="@+id/Button2"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/frag_section"
+        tools:layout="@layout/frag1_layout"/>
 </LinearLayout>

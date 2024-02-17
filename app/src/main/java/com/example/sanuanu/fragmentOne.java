@@ -14,6 +14,6 @@ public class fragmentOne extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.activity_app_bar_fragments,container,false);
+        return inflater.inflate(R.layout.frag1_layout,container,false);
     }
 }

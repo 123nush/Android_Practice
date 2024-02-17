@@ -2,10 +2,10 @@ package com.example.sanuanu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,10 +24,20 @@ public class AppBarFragments extends AppCompatActivity {
 
     }
 
-//    public void selectFragement(View view){
-//        Fragment fr;
-//        if(view==findViewById());
-//    }
+    public void selectFragement(View view){
+       Fragment fr;
+        if(view==findViewById(R.id.Button1)){
+            fr = new fragmentOne();
+        } else{
+            fr = new fragmentTwo();
+        }
+
+        FragmentManager fm = getFragmentManager();
+
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.frag_section,fr);
+        fragmentTransaction.commit();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
