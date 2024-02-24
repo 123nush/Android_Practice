@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         button_relative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +102,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent ab =new Intent(MainActivity.this,AppBarFragments.class);
                 startActivity(ab);
+            }
+        });
+        Button lc = findViewById(R.id.act_life_cycle);
+        lc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ActivityLifecycle.class);
+                startActivity(intent);
             }
         });
     }
