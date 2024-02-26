@@ -7,18 +7,18 @@
         android:icon="@drawable/baseline_location_on_24"
         android:title="location"
         android:contentDescription="your location"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/item3"
         android:icon="@drawable/baseline_contacts_24"
         android:title="contact"
         android:contentDescription="contact us"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/item2"
-        android:icon="@drawable/nav_dots"
-        android:title="Navigation dots"
-        android:contentDescription="From here go anywhere"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
+<!--    <item-->
+<!--        android:id="@+id/item2"-->
+<!--        android:icon="@drawable/nav_dots"-->
+<!--        android:title="Navigation dots"-->
+<!--        android:contentDescription="From here go anywhere"-->
+<!--        app:showAsAction="ifRoom"/>-->
 </menu>

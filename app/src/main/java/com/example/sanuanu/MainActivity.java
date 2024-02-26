@@ -1,10 +1,12 @@
 package com.example.sanuanu;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
@@ -83,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
         button_relative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent rel=new Intent(MainActivity.this,Relative.class);
+//                Intent rel=new Intent(MainActivity.this,Relative.class);
+                Intent rel=new Intent(MainActivity.this,greed.class);
                 startActivity(rel);
             }
         });
@@ -108,8 +111,24 @@ public class MainActivity extends AppCompatActivity {
         lc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ActivityLifecycle.class);
-                startActivity(intent);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Do you want to Navigate?");
+                builder.setTitle("Alert!!");
+                builder.setCancelable(false);
+                builder.setPositiveButton("No",(DialogInterface.OnClickListener)(dialog, which) -> {
+                    dialog.cancel();
+                });
+                builder.setNegativeButton("Yes",(DialogInterface.OnClickListener)(dialog, which) -> {
+                    Intent intent = new Intent(MainActivity.this, ActivityLifecycle.class);
+                    startActivity(intent);
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+
+
+
             }
         });
     }
@@ -141,5 +160,23 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Do you want to exit?");
+        builder.setTitle("Alert!!");
+        builder.setCancelable(false);
+        builder.setPositiveButton("No",(DialogInterface.OnClickListener)(dialog, which) -> {
+            dialog.cancel();
+        });
+        builder.setNegativeButton("Yes",(DialogInterface.OnClickListener)(dialog, which) -> {
+            finish();
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
     }
 }

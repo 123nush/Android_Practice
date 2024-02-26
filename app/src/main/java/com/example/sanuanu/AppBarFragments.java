@@ -55,9 +55,7 @@ public class AppBarFragments extends AppCompatActivity {
             case R.id.item1:
                 Toast.makeText(this, "Your Location", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.item2:
-                Toast.makeText(this, "Contact Us", Toast.LENGTH_SHORT).show();
-                return true;
+
             case R.id.item3:
                 Toast.makeText(this, "Navigation", Toast.LENGTH_SHORT).show();
                 return true;

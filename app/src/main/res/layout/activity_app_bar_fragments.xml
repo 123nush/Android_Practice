@@ -38,4 +38,5 @@
         android:layout_margin="20dp"
         android:id="@+id/frag_section"
         tools:layout="@layout/frag1_layout"/>
+
 </LinearLayout>
