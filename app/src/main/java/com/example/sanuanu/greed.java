@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class greed extends AppCompatActivity {
@@ -21,22 +23,30 @@ public class greed extends AppCompatActivity {
         setContentView(R.layout.activity_greed);
         EditText name=findViewById(R.id.name);
         EditText age=findViewById(R.id.age);
-        EditText mobile=findViewById(R.id.mobile);
-        EditText roll=findViewById(R.id.roll);
+//        EditText mobile=findViewById(R.id.mobile);
+//        EditText roll=findViewById(R.id.roll);
         Button send_data=findViewById(R.id.send_data);
+        TextView txt = findViewById(R.id.result);
         String n=name.getText().toString();
-        String a=age.getText().toString();
-        String m=mobile.getText().toString();
-        String r=roll.getText().toString();
+//        String a=age.getText().toString();
+//        String m=mobile.getText().toString();
+//        String r=roll.getText().toString();
+
+        //Log.d("Name:", n );
         send_data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(greed.this,greed_intentData.class);
-                intent.putExtra("Name",n);
-                intent.putExtra("Age",a);
-                intent.putExtra("Mobile",m);
-                intent.putExtra("Roll",r);
-                startActivity(intent);
+//                Intent intent=new Intent(greed.this,greed_intentData.class);
+//                intent.putExtra("Name",n);
+//                intent.putExtra("Age",a);
+//                intent.putExtra("Mobile",m);
+//                intent.putExtra("Roll",r);
+
+//                startActivity(intent);
+                age.setText(n);
+
+
+
 
             }
         });

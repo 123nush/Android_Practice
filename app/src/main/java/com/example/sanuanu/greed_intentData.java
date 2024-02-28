@@ -14,12 +14,16 @@ public class greed_intentData extends AppCompatActivity {
         setContentView(R.layout.activity_greed_intent_data);
         Intent intent=getIntent();
         String n=intent.getStringExtra("Name");
-        String a=intent.getStringExtra("Age");
-        String m=intent.getStringExtra("Mobile");
-        String r=intent.getStringExtra("Roll");
+//        String a=intent.getStringExtra("Age");
+//        String m=intent.getStringExtra("Mobile");
+//        String r=intent.getStringExtra("Roll");
+
         TextView content=findViewById(R.id.content);
-        content.setText("Name:"+n+" "+"Age:"+a+" "+"Mobile:"+m+" "+"Roll No:"+r);
-//        content.setText(a);
+//        TextView content1=findViewById(R.id.content1);
+
+        content.setText("Helooo");
+//        content.setText("Name:"+n+" "+"Age:"+a+" "+"Mobile:"+m+" "+"Roll No:"+r);
+//        content.setText(String.valueOf(n));
 
     }
 }

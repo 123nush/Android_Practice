@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 //                Intent rel=new Intent(MainActivity.this,Relative.class);
                 Intent rel=new Intent(MainActivity.this,greed.class);
+//                Intent rel=new Intent(MainActivity.this,mediaAudio.class);
                 startActivity(rel);
             }
         });
